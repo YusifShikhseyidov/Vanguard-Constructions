@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  :root {
+    /* Modern Industrial Minimalism Palette */
+    
+    /* Void Black - The foundation */
+    --background: #050505;
+    --foreground: #E5E5E5;
+
+    /* Concrete & Steel - The structure */
+    --card: #0F0F0F;
+    --card-foreground: #E5E5E5;
+    --popover: #0F0F0F;
+    --popover-foreground: #E5E5E5;
+
+    /* International Orange - The high-vis accent (Raw Power) */
+    --primary: #FF3300; 
+    --primary-foreground: #000000;
+
+    /* Brushed Metal - Secondary elements */
+    --secondary: #1A1A1A;
+    --secondary-foreground: #A1A1AA;
+
+    /* Muted Concrete */
+    --muted: #1A1A1A;
+    --muted-foreground: #71717A;
+
+    /* Safety Yellow/Amber - Alternative accent */
+    --accent: #FF3300;
+    --accent-foreground: #000000;
+
+    --destructive: #7F1D1D;
+    --destructive-foreground: #E5E5E5;
+
+    --border: #27272A;
+    --input: #27272A;
+    --ring: #FF3300;
+
+    --radius: 0rem; /* Sharp edges for industrial feel */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight uppercase;
+  }
+}
